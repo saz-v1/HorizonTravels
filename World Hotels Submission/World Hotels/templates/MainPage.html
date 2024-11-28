@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- By Syed Zaheer 22019147 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>World Hotels - Hotel Booking</title>
+</head>
+<body>
+    <main>
+        <div style="text-align: center;" class="card">
+                {% for hotel in hotels %}
+                    <img src="/static/HotelPics/{{ hotel[0] }}.jpg" alt="Hotel Image" style="height:50%; width:50%; text-align: center:">
+                    <h1>{{ hotel[1] }}</h1>
+                    <a href="booking/{{hotel[0]}}"><button>Book</button></a>
+                {% endfor %}
+                <br>
+                <br>
+        </div>
+    </main>
+</body>
+<div class="footer-mainpage">
+    <form action="{{url_for('index')}}">
+        <button>Log Out!</button>
+    </form>
+</div>
+</html>

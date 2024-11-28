@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- By Syed Zaheer 22019147 -->
+<html lang="en">
+<head style="text-align: center">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>World Hotels</title>
+</head>
+<body style="text-align: center">
+    <header>
+        <h1 class="header-title">World Hotels</h1>
+        <h2 class="title">SIGN IN TO YOUR ACCOUNT!</h2>
+    </header>
+    <div class="container" style="border:none;">
+        <form action="{{ url_for('login') }}" method="post">
+            <label for="Email">Email</label>
+            <input type="text" id="Email" name="Email" placeholder="Enter your Email" required>
+
+            <label for="Password">Password</label>
+            <input type="Password" id="Password" name="Password" placeholder="Enter your Password" required>
+
+            <button type="submit">Login</button> 
+        </form>
+    </div>   
+        <div style="card">
+            <a href="{{ url_for('register')}}"><button>Register</button></a>
+            <a href="{{ url_for('admin_login')}}"><button>Admin</button></a>
+        </div>
+</body>
+<div class="footer">
+    <form action="{{url_for('PrivacyStatement')}}">
+        <button class ="button">Our Privacy Statement!</button>
+    </form>
+</div>
+</html>
+

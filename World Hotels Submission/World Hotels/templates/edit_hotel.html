@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- By Syed Zaheer 22019147 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Edit Hotel</title>
+</head>
+<body style="text-align: center">
+    <h1>Edit Hotel</h1>
+    <form action="{{ url_for('edit_hotel', hotel_id=hotel.HotelID) }}" method="post">
+        <label for="location">Location:</label><br>
+        <input type="text" id="location" name="location" value="{{ hotel.Location }}"><br><br>
+        <label for="on_peak_price">On Peak Price:</label><br>
+        <input type="text" id="on_peak_price" name="on_peak_price" value="{{ hotel.OnPeakPrice }}"><br><br>
+        <label for="off_peak_price">Off Peak Price:</label><br>
+        <input type="text" id="off_peak_price" name="off_peak_price" value="{{ hotel.OffPeakPrice }}"><br><br>
+        <button type="submit">Update</button>
+    </form>
+</body>
+<div class="footer">
+    <form action="{{url_for('index')}}">
+        <button>Log Out!</button>
+    </form>
+</div>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- By Syed Zaheer 22019147 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Admin Page</title>
+</head>
+<body style="text-align: center">
+    <h1>Admin Page</h1>
+    <a href="/admin/view_bookings"><button>View Bookings</button></a>
+    <a href="/admin/view_users"><button>View Users</button></a>
+    <a href="/admin/view_hotels"><button>View Hotels</button></a>
+</body>
+<div class="footer">
+    <form action="{{url_for('index')}}">
+        <button>Log Out!</button>
+    </form>
+</div>
+</html>

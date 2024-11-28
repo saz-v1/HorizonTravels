@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- By Syed Zaheer 22019147 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Edit Booking</title>
+</head>
+<body>
+    <h1>Edit Booking</h1>
+    <form action="{{ url_for('edit_booking', booking_id=booking_id) }}" method="post">
+        <!-- Display the existing booking details in input fields -->
+        <label for="checkin_date">Check-in Date:</label><br>
+        <input type="date" id="checkin_date" name="checkin_date" value="{{ booking.CheckInDate }}"><br><br>
+        <label for="checkout_date">Check-out Date:</label><br>
+        <input type="date" id="checkout_date" name="checkout_date" value="{{ booking.CheckOutDate }}"><br><br>
+        <button type="submit">Save Changes</button>
+    </form>
+</body>
+<div class="footer">
+    <form action="{{url_for('index')}}">
+        <button>Log Out!</button>
+    </form>
+</div>
+</html>

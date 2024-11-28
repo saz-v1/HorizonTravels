@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!-- By Syed Zaheer 22019147 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Booking Confirmation</title>
+</head>
+<body>
+    <h2>Booking Confirmed!</h2>
+    <p>Your booking has been confirmed successfully.</p>
+    <div class="button">
+        <a href="{{ url_for('main') }}"><button>Make Another Booking!</button></a>
+    </div>
+</body>
+<div class="footer">
+    <form action="{{url_for('index')}}">
+        <button class="button">Log Out!</button>
+    </form>
+</div>
+</html>
